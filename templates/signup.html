@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Signup
+{% endblock %}
+
+{% block body %}
+	<div id="topdiv1" class="card">
+		<form class="px-4 py-3" method="POST" action="{{ url_for('signup') }}">
+			<h5 class="card-title">Sign Up as Merchant</h5>
+		    <div class="form-group">
+		      <label for="name">Full Name</label>
+		      <input type="text" required="required" class="form-control" name="fullname" placeholder="fullname" autofocus>
+		    </div>
+		    <div class="form-group">
+			      <label for="username">Username</label>
+			      <input type="text" required="required" class="form-control" name="username" placeholder="bob">
+			    </div>
+		    <div class="form-group">
+		      <label for="password">Password</label>
+		      <input type="password" required="required" class="form-control" name="password" placeholder="Password">
+		    </div>
+		    <div class="form-group">
+		      <label for="password">Confirm Password</label>
+		      <input type="password" required="required" class="form-control" name="repassword" placeholder="Password">
+		    </div>
+		    <button type="submit" class="btn btn-primary">Sign up</button>
+		</form>
+		<div class="dropdown-divider"></div>
+		<a class="dropdown-item" href="{{ url_for('login') }}">Already have an account? Log in</a>
+	</div>
+{% endblock %}

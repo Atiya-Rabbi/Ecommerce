@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Edit
+{% endblock %}
+
+{% block body %}
+	<div class="container" id="topdiv5">
+		<h5 class="card-title">Edit your Product</h5>
+		<form action="{{ url_for('edit', pro_id = result.pro_id) }}" method="POST">
+			<div class="form-group">
+	    		<label for="exampleFormControlTextarea1">Category</label>
+	    		<textarea class="form-control" id="exampleFormControlTextarea1" rows="1"name="category" required>{{result.category}}</textarea>
+	  		</div>
+	  		<div class="form-group">
+	    		<label for="exampleFormControlTextarea1">Name</label>
+	    		<textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="pro_name" required>{{result.name}}</textarea>
+	  		</div>
+	  		<div class="form-group">
+	    		<label for="exampleFormControlTextarea1">Description</label>
+	    		<textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="description" required>{{result.description}}</textarea>
+	  		</div>
+			<div class="form-group">
+				<label for="exampleFormControlSelect1">Price Range</label>
+	    		<select class="form-control" name="price_range">
+	      			<option value="₹100-₹500">₹100-₹500</option>
+				    <option value="₹500-₹1000">₹500-₹1000</option>
+				    <option value="₹1000-₹2000">₹1000-₹2000</option>
+				    <option value="₹2000-₹5000">₹2000-₹5000</option>
+				    <option value="₹5000-₹10000">₹5000-₹10000</option>
+	    		</select>
+	  		</div>
+	  		<div class="form-group">
+	    		<label for="exampleFormControlTextarea1">Comments</label>
+	    		<textarea class="form-control" id="exampleFormControlTextarea1" rows="1" name="comments" required>{{result.comments}}</textarea>
+	  		</div>
+	  		<button type="submit" class="btn btn-primary">Done</button>
+		</form>
+	</div>
+{% endblock %}

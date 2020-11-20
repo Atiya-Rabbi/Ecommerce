@@ -1,0 +1,29 @@
+#topdiv1, #topdiv0{
+	margin-left: 20%;
+	margin-right: 30%;
+	margin-top: 5%;
+	background-color: #dadff1;
+}
+
+#topdiv4, #topdiv5, #topdiv6{
+	margin-top: 5%;
+	padding-bottom: 20px;
+}
+
+#index0, #index1{
+	padding-top: 30px;
+}
+
+#topdiv2, #topdiv5{
+	background-color: #eac6c6;
+}
+
+#topdiv2, #topdiv3{
+	margin-top: 2%;
+	margin-left: 10%;
+	display: none;
+}
+
+.needspace{
+	margin-left: 15px;
+}

@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    error
+{% endblock %}
+
+{% block body %}
+	<div class="container">
+		<a href="{{ url_for('index') }}"><h4><\<\Go Back</h4></a>
+		<h1>ERROR!</h1>
+		<h3>{{ message }}</h3>
+	</div>
+{% endblock %}
